@@ -424,16 +424,8 @@ Aspectos positivos de la implementacion actual:
 
 - el entorno se levanta de forma reproducible
 - el backend espera a que la base de datos este lista
-- la base se crea automaticamente
-- el frontend ya queda apuntando al backend correcto para uso local
+- el frontend ya queda apuntando al backend correcto para uso
 - el sistema conserva trazabilidad de ingestion
-
-Limitaciones conocidas:
-
-- no hay autenticacion ni control de acceso
-- el endpoint de carga trabaja con ruta de archivo, no con upload binario
-- no se incluyeron tests automatizados
-- la generacion del dataset ocurre en arranque y no como job separado
 
 ## 15. Tecnologias usadas
 
