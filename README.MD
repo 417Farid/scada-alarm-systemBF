@@ -25,6 +25,25 @@ Para una validacion rapida, el evaluador puede seguir este flujo:
 
 ----------------------------------------------------------------------------
 
+### ⚠️ Carga de datos manual
+
+El procesamiento de datos (`POST /process-file`) se realiza de forma manual y no automática al iniciar el sistema.
+
+Esta decisión fue tomada para evitar la duplicación de registros en la base de datos en cada reinicio de la aplicación, ya que la ingestión no es idempotente por defecto.
+
+Además, se buscó mantener una separación clara entre:
+
+- la ingestión de datos (proceso controlado)
+- la consulta y visualización (frontend)
+
+Esto permite simular un escenario más realista, donde los datos llegan de manera controlada (por lotes) y no automáticamente en cada despliegue.
+
+El sistema incluye una tabla de `ingestion_batches` para mantener trazabilidad de cada carga.
+
+Para visualizar datos en el dashboard, es necesario ejecutar previamente el endpoint desde la documentación de la API.
+
+----------------------------------------------------------------------------
+
 ## 1. Objetivo del proyecto
 
 El proyecto busca simular un flujo realista de tratamiento de alarmas SCADA:

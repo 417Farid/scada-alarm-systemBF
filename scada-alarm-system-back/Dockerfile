@@ -36,4 +36,4 @@ COPY . .
 EXPOSE 8000
 
 # Ejecutar app
-CMD ["sh", "-c", "python scripts/generate_data.py csv 5000 && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
+CMD ["sh", "-c", "python scripts/generate_data.py both 5000 && uvicorn app.main:app --host 0.0.0.0 --port 8000"]
