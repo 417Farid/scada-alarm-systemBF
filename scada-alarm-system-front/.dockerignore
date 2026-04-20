@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+.git
+.gitignore
+Dockerfile
+.vscode
+.idea
+*.log
+vite-dev.log
+vite-dev.err.log

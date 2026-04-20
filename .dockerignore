@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+.git
+.gitignore
+Dockerfile
+README.md
+.vscode
+.idea
+*.log
+vite-dev.log
+vite-dev.err.log
+venv/
+__pycache__/
+*.pyc
+.env
+.git

@@ -1,0 +1,28 @@
+services:
+
+  backend:
+    build: ./scada-alarm-system-back
+    container_name: scada_backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./scada-alarm-system-back/.env
+    depends_on:
+      - db
+
+  frontend:
+    build: ./scada-alarm-system-front
+    container_name: scada_frontend
+    ports:
+      - "5173:5173"
+    depends_on:
+      - backend
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: scada_db
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=StronPass123!
+    ports:
+      - "1433:1433"

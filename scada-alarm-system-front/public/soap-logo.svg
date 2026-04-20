@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+  <rect width="80" height="80" rx="20" fill="#0B1220"/>
+  <path d="M18 48C27 31 42 24 62 24" stroke="#22D3EE" stroke-width="6" stroke-linecap="round"/>
+  <path d="M20 56C35 58 49 51 61 36" stroke="#EF4444" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="22" cy="48" r="4" fill="#22D3EE"/>
+  <circle cx="61" cy="24" r="4" fill="#22D3EE"/>
+  <circle cx="61" cy="36" r="4" fill="#EF4444"/>
+  <text x="40" y="46" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="15" font-weight="800" text-anchor="middle">SOAP</text>
+</svg>
