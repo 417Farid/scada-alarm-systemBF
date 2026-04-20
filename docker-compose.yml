@@ -8,7 +8,8 @@ services:
     env_file:
       - ./scada-alarm-system-back/.env
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   frontend:
     build: ./scada-alarm-system-front
@@ -23,6 +24,12 @@ services:
     container_name: scada_db
     environment:
       - ACCEPT_EULA=Y
-      - SA_PASSWORD=StronPass123!
+      - SA_PASSWORD=StrongPass123!
     ports:
       - "1433:1433"
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/mssql-tools18/bin/sqlcmd -C -S localhost -U sa -P \"$$SA_PASSWORD\" -Q \"SELECT 1\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 20
+      start_period: 20s

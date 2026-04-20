@@ -2,7 +2,10 @@ import random
 import json
 import pandas as pd
 import sys
-from datetime import datetime, timedelta   
+from datetime import datetime, timedelta
+from zoneinfo import ZoneInfo
+
+LOCAL_TIMEZONE = ZoneInfo("America/Bogota")
 
 TAGS = [
     "MOTOR_1",
@@ -38,7 +41,7 @@ def old_timestamp():
 
 # Generate a realistic timestamp distribution with mostly recent events
 def random_timestamp():
-    now = datetime.now()
+    now = datetime.now(LOCAL_TIMEZONE)
     recent_window_seconds = 7 * 24 * 60 * 60
     historical_window_seconds = 2190 * 24 * 60 * 60
 
