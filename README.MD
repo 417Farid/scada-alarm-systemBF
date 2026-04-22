@@ -17,7 +17,7 @@ Para una validacion rapida, el evaluador puede seguir este flujo:
 
 1. clonar el repositorio
 2. copiar los `.env.example` a `.env` para practicidad de la prueba
-3. ejecutar `docker-compose up --build`, recomiendo usar Git Bash.
+3. ejecutar `docker-compose up --build`, recomiendo usar Git Bash. (Debe tener Docker Desktop abierto para Windows.)
 4. abrir `http://localhost:8000/docs` y hacer el post de /process-file con el file_path= data.csv. Esto iniciara el procesamiento de los datos y se enviara la informacion a la base de datos.
 5. abrir `http://localhost:5173`
 6. revisar dashboard, tabla, filtros y estadisticas
